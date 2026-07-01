@@ -1,4 +1,4 @@
-const CACHE_NAME = "log-analyzer-mobile-v1";
+const CACHE_NAME = "log-analyzer-mobile-v2";
 const SHELL = ["./index.html", "./manifest.webmanifest", "./plotly.min.js"];
 
 self.addEventListener("install", (event) => {
