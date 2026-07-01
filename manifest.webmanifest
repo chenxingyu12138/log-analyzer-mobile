@@ -1,0 +1,10 @@
+{
+  "name": "日志分析助手 Mobile",
+  "short_name": "日志分析",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#1769aa",
+  "description": "手机本地解析日志并生成 CSV 和图表"
+}
