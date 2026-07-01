@@ -1,4 +1,4 @@
-const CACHE_NAME = "log-analyzer-mobile-v2";
+const CACHE_NAME = "log-analyzer-mobile-v3";
 const SHELL = ["./index.html", "./manifest.webmanifest", "./plotly.min.js"];
 
 self.addEventListener("install", (event) => {
@@ -7,7 +7,11 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))))
+      .then(() => self.clients.claim())
+  );
 });
 
 self.addEventListener("fetch", (event) => {

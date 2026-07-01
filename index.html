@@ -176,7 +176,7 @@
   <header>
     <div class="wrap topbar">
       <h1>日志分析助手 Mobile</h1>
-      <div class="badge">本地解析，不上传服务器</div>
+      <div class="badge">本地解析，不上传服务器 · 静态图片版 v3</div>
     </div>
   </header>
 
@@ -912,7 +912,7 @@
     });
 
     if ("serviceWorker" in navigator && location.protocol !== "file:") {
-      navigator.serviceWorker.register("sw.js").catch(() => {});
+      navigator.serviceWorker.register("sw.js?v=3").catch(() => {});
     }
   </script>
 </body>
